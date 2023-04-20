@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>digite um numero</h1>
+    <p><input type="number" value="0" name="" id="numtxt1"></p>
+    <p>digite outro</p>
+    <p><input type="number" value="0" name="" id="numtxt2"></p>
+    <p><button id="resbtn" onclick="calcular()">Resultado</button></p>
+    <p id="restxt"></p>
+</body>
+    <script>
+        let numero1 = document.querySelector('#numtxt1')
+        let numero2 = document.querySelector('#numtxt2')
+        
+        function calcular(){
+            let num1 = parseInt(numero1.value)
+            let num2 = parseInt(numero2.value)
+            let resultado = document.querySelector('#restxt')
+            let soma = (num1 + num2)
+            let subt = (num1 - num2)
+            let mult = (num1 * num2)
+            let divi = (num1 / num2)
+
+        
+            resultado.innerHTML = `A soma é ${soma} 
+                                    <br> A subtração é ${subt}
+                                    <br> A Multiplicação é ${mult}
+                                    <br> A divisão é ${divi}`
+            
+        }
+    </script>
+</html>
