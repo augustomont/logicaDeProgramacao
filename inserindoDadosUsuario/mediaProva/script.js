@@ -4,9 +4,7 @@ function avaliar(){
     let media = (parseFloat(p1.value) + parseFloat(p2.value)) / 2
     let res = document.querySelector('#resultado')
 
-    if(p1.value == 0 || p2.value == 0){
-        res.innerHTML = "REPROVADO!"
-    } else if(media<5){
+    if(p1.value == 0 || p2.value == 0 || media<5){
         res.innerHTML = `REPROVADO! <br>
         Sua media é ${media}`
     } else {
