@@ -9,23 +9,33 @@
 <body>
     <header><h1>Switch Cases</h1></header>
     <section>
-        <p>Digite um numero <input type="number" name="" id="numtxt"></p>
+        <p><label for="numtxt">Digite um numero de 0 a 4:</label><input type="number" name="" id="numtxt" min="0" max="4" onkeypress="verificar()"></p>
         <button onclick="verificar()">Verificar</button>
         <p id="resultado">Analisando...</p>
     </section>
     <script>
         function verificar(){
-            let num = document.querySelector('#numtxt')
-            let n = parseInt(num)
+            let num = document.querySelector("#numtxt").value
+            let n = parseFloat(num)
             let res = document.querySelector('#resultado')
-
             switch (n){
                 case 0:
-                   alert('ta frio');
+                   res.innerHTML = "ta frio"
                     break;
-                
-            }
+                case 1:
+                   res.innerHTML = "ta esquentando"
+                    break;
+                case 2:
+                   res.innerHTML = "ta quase la"
+                    break;
+                case 3:
+                   res.innerHTML = "ta quente"
+                    break;
+                case 4:
+                   res.innerHTML = "Acertou!"
+                    break;
         }
+    }
     </script>
 </body>
 </html>
